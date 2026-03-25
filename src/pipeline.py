@@ -6,9 +6,9 @@ from pathlib import Path
 from pypdf import PdfReader, PdfWriter
 
 # Import your existing modules
-from pdf_extractor import extract_text_from_pdf
-from ocr_extractor import extract_pdf_with_rest
-from llm import LLMService
+from src.pdf_extractor import extract_text_from_pdf
+from src.ocr_extractor import extract_pdf_with_rest
+from src.llm import LLMService
 
 class ExtractionPipeline:
     def __init__(self, input_folder, processed_folder):

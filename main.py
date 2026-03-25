@@ -1,4 +1,4 @@
-from pipeline import ExtractionPipeline
+from src.pipeline import ExtractionPipeline
 
 def main():
     # Configuration
