@@ -9,10 +9,17 @@ The input text represents the **first 2 pages** of a long Lease Deed. It contain
 **Source Text:** {document_text}
 
 ### 4. INSTRUCTIONS
-1. Locate the "Schedule" or "Description" section to find the Village and Survey Number.
-2. Identify the "Habendum" or "Commencement" clause to find the Lease Start Date.
-3. Extract the Registered Document Number (often stamped on the top/side of the page).
-4. **Language Processing:** Translate all local names (e.g., "तालुका", "मौज") and values into English.
+1. Extract Survey number from the information. Make sure you extract new survey number only.
+2. Extract the village name from the context. 
+3. Extract the "Lease Deed Doc No." as DNR number followed by year. 
+4. Extract Lease Area from the context.
+5. Extract the Lease Start Date which will be the starting date which exists like "on this". 
+
+for eg: DNR\n37 3/51\nLEASE DEED / લીઝનોરાર 2023\nThis Lease Deed (“Deed”) is made and executed at Rampura Mota, Taluka:-Dhanera,\nDistrict:-Banaskantha, Gujarat, on this 4th June 2021 by and between. the output will be:
+
+Lease Deed Doc No: 37/2023
+Lease Start Date: 04/06/2021
+
 
 ### 5. CONSTRAINTS
 **No Hallucination:** Since you only have the first 2 pages, do not guess data that might be on page 50. Use null if missing.
