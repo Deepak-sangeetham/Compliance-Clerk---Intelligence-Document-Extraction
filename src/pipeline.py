@@ -57,8 +57,8 @@ class ExtractionPipeline:
         """Loads Markdown prompts and calls LLM to extract data."""
         
         # Define paths to your .md prompt files
-        prompt_final_path = Path(r"prompts_db\LeaseDeedPrompt.md")
-        prompt_lease_path = Path(r"prompts_db\NA_FinalOrderPrompt.md")
+        prompt_final_path = Path(r"prompts_db\NA_FinalOrderPrompt.md") 
+        prompt_lease_path = Path(r"prompts_db\LeaseDeedPrompt.md")
 
         # 1. Process Final Order
         data_final = {}

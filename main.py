@@ -2,7 +2,7 @@ from src.pipeline import ExtractionPipeline
 
 def main():
     # Configuration
-    INPUT_DIR = r"Navspark hiring\inputs"
+    INPUT_DIR = r"Navspark hiring\test_inputs"
     PROCESSED_DIR = "processed"
     
     pipeline = ExtractionPipeline(INPUT_DIR, PROCESSED_DIR)

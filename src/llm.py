@@ -30,13 +30,13 @@ class LLMService:
             raw_response = str(res_data)
             parsed_json = {"error": "Failed to parse JSON", "raw": raw_response}
 
-        # Logging for Audit
         log_entry = {
             "timestamp": datetime.now().isoformat(),
             "doc_id": doc_id,
             "doc_type": doc_type,
-            "prompt": prompt,
-            "response": raw_response
+            "extracted_text_source": context_text,  # <--- Added this
+            "input_prompt": prompt,
+            "raw_llm_response": raw_response
         }
         with open(self.audit_log, "a") as f:
             f.write(json.dumps(log_entry) + "\n")
