@@ -1,6 +1,6 @@
 .env
 Navspark hiring/
-
+processed/
 .venv
 test.py
 test2.py
